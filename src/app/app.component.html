@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="wrapper">
+    <div class="search-fields">
+      <div>
+        <input [(ngModel)]="name" placeholder="Name" title="Name"/><i class="fa fa-search"></i>
+      </div>
+      <select [(ngModel)]="genre" title="Genre">
+        <option [value]=null>Genre</option>
+        <option *ngFor="let opt of genreList" [ngValue]="opt">{{opt}}</option>
+      </select>
+      <select [(ngModel)]="premiere" title="Premiere Year">
+        <option [value]=null>Premiere Year</option>
+        <option *ngFor="let opt of yearsList" [ngValue]="opt">{{opt}}</option>
+      </select>
+    </div>
+    <div class="table-wrapper">
+      <table class="table" *ngIf="data">
+        <thead>
+        <tr>
+          <th *ngFor="let col of headers" (click)="sort(col.toLowerCase())">{{col}}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr
+          *ngFor="let obj of data | search:[{name: name, genre: genre, premiere: premiere}] | orderBy: {property: column, direction: direction} | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }">
+          <td class="table-name">
+            <div>{{obj.name}}</div>
+            <div class="table-genre">
+              <div [ngClass]="g.split(' ').join('-')" *ngFor="let g of obj.genre">
+                {{g}}
+              </div>
+            </div>
+          </td>
+          <td> {{obj.season}} </td>
+          <td> {{obj.network}} </td>
+          <td> {{obj.premiere}} </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="pagination">
+      <pagination-controls class="pagination-buttons" style="flex: 4"
+                           (pageChange)="currentPage = $event"></pagination-controls>
+      <div class="items-per-page">
+        <button (click)="setItemPerPage(1)" [ngClass]="itemsPerPage === 1 ? 'item-per-page-active' : 'item-per-page'"
+                value="{{itemsPerPage}}">1
+        </button>
+        <button (click)="setItemPerPage(2)" [ngClass]="itemsPerPage === 2 ? 'item-per-page-active' : 'item-per-page'"
+                value="{{itemsPerPage}}">2
+        </button>
+        <button (click)="setItemPerPage(3)" [ngClass]="itemsPerPage === 3 ? 'item-per-page-active' : 'item-per-page'"
+                value="{{itemsPerPage}}">3
+        </button>
+      </div>
+    </div>
+    <div>
+    </div>
+  </div>
+</div>

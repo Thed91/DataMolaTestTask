@@ -1,0 +1,32 @@
+[
+  {
+    "name": "The Terror",
+    "genre": [
+      "horror",
+      "drama"
+    ],
+    "season": 3,
+    "network": "AMC",
+    "premiere": "20.10.2020"
+  },
+  {
+    "name": "Better Call Soul",
+    "genre": [
+      "crime",
+      "tragedy"
+    ],
+    "season": 4,
+    "network": "Netflix",
+    "premiere": "1.10.2019"
+  },
+  {
+    "name": "Preacher",
+    "genre": [
+      "drama",
+      "dark comedy"
+    ],
+    "season": 5,
+    "network": "AMC, Netflix",
+    "premiere": "10.10.2019"
+  }
+]

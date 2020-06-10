@@ -1,0 +1,160 @@
+body, html {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.search-fields {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-fields div, select, input {
+  background: #f2994a;
+  border: 0;
+  height: 40px;
+  width: 31%;
+  padding: 0 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.search-fields div, select, input:focus {
+  outline: none;
+}
+
+.search-fields input {
+  width: 90%;
+}
+
+.search-fields input::placeholder {
+  color: white;
+  width: 90%;
+}
+
+.table-wrapper {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.table {
+  width: inherit;
+  border-collapse: collapse;
+  background: white;
+}
+
+.table th {
+  background: #934dd6;
+  color: white;
+  height: 40px;
+  width: 20%;
+  cursor: pointer;
+}
+
+.table td {
+  padding: 20px;
+}
+
+.table-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.table-name div {
+  text-align: left;
+}
+
+.table-genre {
+  display: flex;
+}
+
+.table-genre div {
+  border-radius: 2em;
+  color: white;
+  width: 100px;
+  text-align: center;
+  margin: 0 5px 0 0;
+}
+
+.pagination {
+  display: flex;
+}
+
+.pagination-buttons /deep/ .ngx-pagination .current {
+  background: #f2994a;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.pagination-buttons /deep/ .ngx-pagination :focus {
+  outline: none;
+}
+
+.pagination-buttons /deep/ .ngx-pagination {
+  text-align: center;
+}
+
+.items-per-page {
+  display: flex;
+  align-self: center;
+  flex: 1;
+}
+
+.item-per-page {
+  border: 0;
+  background: white;
+  margin: 5px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.item-per-page:focus {
+  outline: none;
+}
+
+.item-per-page-active {
+  border: 0;
+  background: #f2994a;
+  color: white;
+  margin: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.item-per-page-active:focus {
+  outline: none;
+}
+
+.horror {
+  background: #4f4f4f;
+}
+
+.drama {
+  background: #bb6bd9;
+}
+
+.crime {
+  background: #9e55e1;
+}
+
+.tragedy {
+  background: #eb5757;
+}
+
+.dark-comedy {
+  background: #808080;
+}
